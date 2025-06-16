@@ -421,7 +421,7 @@ body::-webkit-scrollbar {
 
 @media (max-width: 480px) {
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
     padding: 10px;
   }
 
