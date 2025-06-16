@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f6f6f6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    color:#1D232C;
+    align-items: center;
+    background-color: white;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: sticky;
+    top: 0px;
+    z-index: 3;  
+}
+
+.navbar h1 {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+}
+
+.navbar-links {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-link a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar-link a:hover {
+    color: #666;
+}
+
+/* Toggle Menu */
+.navbar-menu-toggle {
+    display: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+/* Side Navbar */
+.side-navbar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #1D232C;
+    color: #E2E1E1;
+    transition:left 1s ease-in-out;
+    z-index:999;
+    padding: 20px;
+}
+
+.side-navbar.active {
+    left: 0;
+}
+
+.side-navbar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.side-navbar-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+
+/* Contact Form Styles */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.contact-form {
+    background-color: #1D232C;
+    color: white;
+    padding: 60px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1440px; 
+    min-height: 856.16px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin-bottom: 0;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    height: 90px; 
+    font-size: 18px;
+}
+.contact-form textarea {
+    min-height: 200px;
+    font-size: 18px;
+}
+
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 12px 24px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Newsletter */
+.news {
+    font-size: 2vw;
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+.news input.search {
+    padding: 11px;
+    width: 80vw;
+    margin-bottom: 10px;
+    border: solid #1D232C 3px;
+}
+
+.news button {
+    margin-top: 10px;
+    font-size: 1.8vw;
+    color: #E2E1E1;
+    background-color: #1D232C;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    font-size: 2vw;
+    margin-top: 5vw;
+    padding: 40px;
+    background-color: #1D232C;
+    color: #E2E1E1;
+    box-sizing: border-box;
+}
+
+.footer-box-1 p {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-icon-container {
+    margin-top: 10px;
+}
+
+.icon {
+    font-size: 35px;
+    width: 30px;
+    margin: 2vw;
+    cursor: pointer;
+    font-weight: 400;
+    font-family: "Font Awesome 6 Brands";
+}
+
+.subtitle {
+    margin-top: 20px;
+    font-size: 35px;
+    color:white;
+}
+
+.initial-scroll-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.initial-scroll-animate.animate {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+body::-webkit-scrollbar {
+    display: none; 
+}
+
+
+@media (max-width: 768px) {
+ .navbar-links {
+    display: none; 
+  }
+
+  .navbar-menu-toggle {
+    display: block; 
+  }
+
+  .side-navbar {
+    left: -100%;
+  }
+
+  .side-navbar.active {
+    left: 0;
+  }
+
+  
+.contact-container {
+    height: auto;
+    width: auto;
+}
+  .side-navbar {
+    left: -100%;
+  }
+
+  .side-navbar.active {
+    left: 0;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .product img {
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  .filter-section {
+    display: none; 
+  }
+
+  .navbar-search input {
+    font-size: 4vw;
+  }
+
+  .contact-form {
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 95vw;
+  }
+
+  
+
+  .footer {
+    font-size: 4vw;
+    text-align: center;
+  }
+
+  .footer-icon-container {
+    justify-content: center;
+  }
+}
+
